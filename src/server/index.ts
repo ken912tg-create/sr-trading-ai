@@ -77,7 +77,13 @@ export class Chat extends Server<Env> {
 		}
 	}
 }
+export class SignalHub {
+	constructor(private state: DurableObjectState, private env: Env) {}
 
+	async fetch(request: Request): Promise<Response> {
+		return new Response("SignalHub OK");
+	}
+}
 export default {
 	async fetch(request, env) {
 		return (
