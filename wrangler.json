@@ -4,9 +4,13 @@
 	"name": "sr-trading-ai",
 	"migrations": [
 		{
-			"new_sqlite_classes": ["Chat"],
-			"tag": "v1"
-		}
+  "new_sqlite_classes": ["Chat"],
+  "tag": "v1"
+},
+{
+  "new_sqlite_classes": ["SignalHub"],
+  "tag": "v2"
+}
 	],
 	"assets": {
 		"directory": "./public",
@@ -18,10 +22,14 @@
 	},
 	"durable_objects": {
 		"bindings": [
-			{
-				"class_name": "Chat",
-				"name": "Chat"
-			}
+		{
+  "class_name": "Chat",
+  "name": "Chat"
+},
+{
+  "class_name": "SignalHub",
+  "name": "SIGNAL_HUB"
+}	
 		]
 	},
 	"observability": {
